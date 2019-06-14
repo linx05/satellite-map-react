@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'recompose';
 import { geolocated } from 'react-geolocated';
-import { setSatelliteLocation, setUserLocation } from '../../redux/actions/Map';
+import { setUserLocation } from '../../redux/actions/map';
+import { setSatelliteLocation } from '../../redux/actions/satellite';
 import Map from './Map';
 
 class MapContainer extends Component {
@@ -35,9 +36,9 @@ MapContainer.propTypes = {
 const mapStateToProps = state => {
   return {
     userLocation: state.map.userLocation,
-    marker: state.map.satelliteLocation && state.map.satelliteLocation.position && {
-      lat: state.map.satelliteLocation.position.lat,
-      lng: state.map.satelliteLocation.position.lng,
+    marker: state.satellite.position && {
+      lat: state.satellite.position.lat,
+      lng: state.satellite.position.lng,
     },
   };
 };
