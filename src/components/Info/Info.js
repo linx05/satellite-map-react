@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import React from "react";
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const Info = ({ info, location }) => {
   const renderSatelliteInfo = () => {
@@ -30,7 +30,7 @@ const Info = ({ info, location }) => {
         <p>Latitude: {location.lat}</p>
         <p>Longitude: {location.lng}</p>
         <p>
-          Timestamp:{" "}
+          Timestamp:{' '}
           {`${dateTimeString.toLocaleDateString()} ${dateTimeString.toLocaleTimeString()}`}
         </p>
       </div>

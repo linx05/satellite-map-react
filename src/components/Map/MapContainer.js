@@ -1,11 +1,11 @@
-import PropTypes from "prop-types";
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { compose } from "recompose";
-import { geolocated } from "react-geolocated";
-import { setUserLocation } from "../../redux/actions/map";
-import { setSatelliteLocation } from "../../redux/actions/satellite";
-import Map from "./Map";
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { compose } from 'recompose';
+import { geolocated } from 'react-geolocated';
+import { setUserLocation } from '../../redux/actions/map';
+import { setSatelliteLocation } from '../../redux/actions/satellite';
+import Map from './Map';
 
 class MapContainer extends Component {
   componentDidUpdate(prevProps) {

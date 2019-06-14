@@ -1,6 +1,6 @@
-import { combineReducers } from "redux";
-import map from "./map";
-import satellite from "./satellite";
+import { combineReducers } from 'redux';
+import map from './map';
+import satellite from './satellite';
 
 export default combineReducers({
   map,

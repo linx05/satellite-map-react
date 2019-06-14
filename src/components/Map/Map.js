@@ -1,13 +1,13 @@
-import PropTypes from "prop-types";
-import React, { Component } from "react";
-import { compose, withProps } from "recompose";
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { compose, withProps } from 'recompose';
 import {
   GoogleMap,
   Marker,
   withGoogleMap,
   withScriptjs
-} from "react-google-maps";
-import SatelliteAPI from "../../services/SatelliteAPI";
+} from 'react-google-maps';
+import SatelliteAPI from '../../services/SatelliteAPI';
 
 const satelliteInterval = 1000 * 10;
 

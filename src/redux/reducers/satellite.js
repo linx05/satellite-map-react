@@ -1,8 +1,8 @@
-import { SET_SATELLITE_LOCATION } from "../actions/satellite";
+import { SET_SATELLITE_LOCATION } from '../actions/satellite';
 
 const initialState = {
   info: {
-    satname: "SPACE STATION",
+    satname: 'SPACE STATION',
     satid: 25544
   },
   position: {}

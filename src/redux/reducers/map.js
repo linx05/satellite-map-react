@@ -1,4 +1,4 @@
-import { SET_USER_LOCATION } from "../actions/map";
+import { SET_USER_LOCATION } from '../actions/map';
 
 const initialState = {
   userLocation: {
