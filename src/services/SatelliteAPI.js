@@ -13,13 +13,15 @@ class SatelliteAPI extends API {
   getPositions(observerPositions, seconds = 1, satId = 36516) {
     const { lat, lng } = observerPositions;
     const url = `positions/${satId}/${lat}/${lng}/0/${seconds}`;
-    return this.makeRequest({ url: this.getUrlWithKey(url), method: 'GET' })
-      .then((data) => {
-        if (data.error) {
-          return Promise.reject(data.error);
-        }
-        return data;
-      });
+    return this.makeRequest({
+      url: this.getUrlWithKey(url),
+      method: 'GET'
+    }).then(data => {
+      if (data.error) {
+        return Promise.reject(data.error);
+      }
+      return data;
+    });
   }
 }
 

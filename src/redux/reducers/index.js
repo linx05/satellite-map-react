@@ -4,5 +4,5 @@ import satellite from './satellite';
 
 export default combineReducers({
   map,
-  satellite,
+  satellite
 });

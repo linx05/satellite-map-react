@@ -4,7 +4,7 @@ import Info from './Info';
 const mapStateToProps = state => {
   return {
     location: state.satellite.position,
-    info: state.satellite.info,
+    info: state.satellite.info
   };
 };
 

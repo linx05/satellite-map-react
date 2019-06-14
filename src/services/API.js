@@ -9,8 +9,7 @@ export class API {
     return axios({
       url: `${this.baseUrl}/${url}`,
       method,
-      data,
-    })
-    .then(data => data.data);
+      data
+    }).then(data => data.data);
   }
 }
