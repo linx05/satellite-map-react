@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Info = ({ info, location }) => {
+const Info = ({ info, location, startPollingSatelliteLocation, stopPollingSatelliteLocation }) => {
   const renderSatelliteInfo = () => {
     if (!info) {
       return null;
@@ -44,6 +44,14 @@ const Info = ({ info, location }) => {
         {renderSatelliteInfo()}
         <hr />
         {renderSatelliteLocation()}
+      </div>
+      <div className="actions">
+        <button onClick={() => stopPollingSatelliteLocation()}>
+          Stop Polling
+        </button>
+        <button onClick={() => startPollingSatelliteLocation()}>
+          Start Polling
+        </button>
       </div>
     </div>
   );
