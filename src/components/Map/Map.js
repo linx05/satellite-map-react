@@ -7,27 +7,20 @@ import {
   withGoogleMap,
   withScriptjs
 } from 'react-google-maps';
-import SatelliteAPI from '../../services/SatelliteAPI';
 
 const satelliteInterval = 1000 * 10;
 
 export class Map extends Component {
   componentDidMount() {
-    this.getSatellitePosition();
+    this.props.getSatelliteLocation();
     this.interval = setInterval(() => {
-      this.getSatellitePosition();
+      this.props.getSatelliteLocation();
     }, satelliteInterval);
   }
 
   componentWillUnmount() {
     clearInterval(this.interval);
   }
-
-  getSatellitePosition = () => {
-    SatelliteAPI.getPositions(this.props.userLocation).then(data => {
-      this.props.setSatelliteLocation(data);
-    });
-  };
 
   render() {
     const { userLocation, marker } = this.props;
@@ -49,7 +42,7 @@ Map.propTypes = {
     lat: PropTypes.number,
     lng: PropTypes.number
   }),
-  setSatelliteLocation: PropTypes.func.isRequired
+  getSatelliteLocation: PropTypes.func.isRequired
 };
 
 export default compose(
