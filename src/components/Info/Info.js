@@ -3,7 +3,9 @@ import React from 'react';
 
 const Info = ({
   info,
-  location
+  location,
+  stopPollingSatelliteLocation,
+  startPollingSatelliteLocation
 }) => {
   const renderSatelliteInfo = () => {
     if (!info) {
@@ -49,10 +51,10 @@ const Info = ({
         {renderSatelliteLocation()}
       </div>
       <div className="actions">
-        <button onClick={() => console.log('Stop the polling')}>
+        <button onClick={() => stopPollingSatelliteLocation()}>
           Stop Polling
         </button>
-        <button onClick={() => console.log('Start the polling')}>
+        <button onClick={() => startPollingSatelliteLocation()}>
           Start Polling
         </button>
       </div>

@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { compose } from 'recompose';
 import { geolocated } from 'react-geolocated';
 import { setUserLocation } from '../../redux/actions/map';
+import { startPollingSatelliteLocation } from '../../redux/actions/satellite';
+
 import Map from './Map';
 
 class MapContainer extends Component {
@@ -52,7 +54,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = {
-  setUserLocation
+  setUserLocation,
+  startPollingSatelliteLocation
 };
 
 export default compose(

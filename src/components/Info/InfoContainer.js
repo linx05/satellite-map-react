@@ -1,5 +1,9 @@
 import { connect } from 'react-redux';
 import Info from './Info';
+import {
+  stopPollingSatelliteLocation,
+  startPollingSatelliteLocation
+} from '../../redux/actions/satellite';
 
 const mapStateToProps = state => {
   return {
@@ -9,7 +13,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = {
-  
+  stopPollingSatelliteLocation,
+  startPollingSatelliteLocation
 };
 
 export default connect(

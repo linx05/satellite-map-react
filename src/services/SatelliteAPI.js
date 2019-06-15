@@ -10,7 +10,7 @@ class SatelliteAPI extends API {
     return `${url}&apiKey=${this.apiKey}`;
   }
 
-  getPositions(observerPositions, seconds = 1, satId = 36516) {
+  getPositions = (observerPositions, seconds = 1, satId = 36516) => {
     const { lat, lng } = observerPositions;
     const url = `positions/${satId}/${lat}/${lng}/0/${seconds}`;
     return this.makeRequest({
