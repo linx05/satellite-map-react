@@ -9,8 +9,7 @@ import {
 
 export class Map extends Component {
   componentDidMount() {
-    //this.props.fetchSatelliteLocation();
-    this.props.startPollingSatelliteLocation();
+    // Start the polling here
   }
 
   render() {

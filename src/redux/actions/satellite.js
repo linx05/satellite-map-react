@@ -4,7 +4,6 @@
  * *******
  */
 
-// This action will be triggered whe we want to start polling the satellite position
 export const SET_SATELLITE_LOCATION = 'SATELLITE/SET_SATELLITE_LOCATION';
 
 // This action will be dispatched when we want to fetch the satellite location
